@@ -1,0 +1,2 @@
+offer_id,business_id,title,description,valid_from,valid_until,price,channel,priority_level,source_name,last_verified_at
+example-offer,example-business,Desayuno oficina,Oferta de desayuno rapido,2026-05-07,2026-06-07,6.50,telegram,high,Web negocio,2026-05-07

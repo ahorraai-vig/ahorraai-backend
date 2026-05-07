@@ -1,0 +1,2 @@
+business_id,name,category,subcategory,neighborhood,summary,channels,actions,tags,price_level,delivery,booking,priority_service,contact_url,source_name,source_url,last_verified_at
+example-business,Negocio Ejemplo,restaurants,desayunos,centro,Desayunos rapidos para oficinas,telegram|telefono,buy|book|urgent,desayuno|oficina|rapido,medio,true,true,true,https://example.com,Google Maps,https://maps.google.com,2026-05-07

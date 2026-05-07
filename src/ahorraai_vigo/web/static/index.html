@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AhorraAI | Plataforma Hiperlocal de Vigo</title>
+    <meta
+      name="description"
+      content="AhorraAI conecta ciudadanos y negocios locales de Vigo con un marketplace conversacional y herramientas de automatización."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand-mark">
+            <span class="brand-mark__dot"></span>
+            <span>AhorraAI</span>
+          </div>
+          <div class="topbar__actions">
+            <a class="ghost-link" href="#marketplace">Marketplace</a>
+            <a class="ghost-link" href="#modulos">Módulos</a>
+            <a class="ghost-link" href="/health">Health API</a>
+          </div>
+        </nav>
+
+        <div class="hero__content">
+          <div class="hero__copy">
+            <p class="eyebrow">Vigo-first SaaS</p>
+            <h1>La capa hiperlocal para comprar, reservar y vender mejor en Vigo.</h1>
+            <p class="hero__lede">
+              AhorraAI une la experiencia conversacional, el marketplace local y la automatización
+              de negocios en una sola plataforma preparada para crecer a web, WhatsApp y más
+              ciudades.
+            </p>
+
+            <div class="hero__cta">
+              <a class="button button--primary" href="#marketplace">Ver ofertas activas</a>
+              <a class="button button--secondary" href="#modulos">Explorar módulos</a>
+            </div>
+
+            <ul class="hero__stats">
+              <li>
+                <strong>1</strong>
+                <span>Base de datos central</span>
+              </li>
+              <li>
+                <strong>2</strong>
+                <span>Interfaces conectadas</span>
+              </li>
+              <li>
+                <strong>∞</strong>
+                <span>Evolución futura</span>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="hero__panel">
+            <div class="signal-card">
+              <p class="signal-card__label">Estado del MVP</p>
+              <div class="signal-card__value">Backend + Bot + Web</div>
+              <p class="signal-card__text">
+                La web ya consume el backend real y muestra las ofertas activas guardadas en la
+                plataforma.
+              </p>
+            </div>
+
+            <div class="mini-console">
+              <div class="mini-console__header">
+                <span></span><span></span><span></span>
+              </div>
+              <pre>AhorraAI.detect(
+  city="vigo",
+  channel="web",
+  mode="marketplace"
+)
+
+status: online
+offers: loading...
+next: citizens + businesses</pre>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="modulos">
+          <div class="section-heading">
+            <p class="eyebrow">Dos caras, un sistema</p>
+            <h2>El MVP está pensado para validar tracción real, no para impresionar con humo.</h2>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card">
+              <p class="module-card__kicker">B2C</p>
+              <h3>AhorraAI Ciudadano</h3>
+              <p>
+                Comparación de precios, pedidos, recomendaciones y servicios locales desde una
+                interfaz conversacional simple.
+              </p>
+              <ul>
+                <li>Compra inteligente</li>
+                <li>Servicios locales</li>
+                <li>Reservas y pedidos</li>
+              </ul>
+            </article>
+
+            <article class="module-card">
+              <p class="module-card__kicker">B2B</p>
+              <h3>Vigo-O-Matic</h3>
+              <p>
+                Herramienta para que pequeños negocios publiquen ofertas, generen contenido y
+                aparezcan en el marketplace sin complicaciones.
+              </p>
+              <ul>
+                <li>Publicación rápida de ofertas</li>
+                <li>Visibilidad local inmediata</li>
+                <li>Base para automatización futura</li>
+              </ul>
+            </article>
+
+            <article class="module-card module-card--accent">
+              <p class="module-card__kicker">Núcleo</p>
+              <h3>Marketplace + IA + Datos</h3>
+              <p>
+                Una sola capa central para alimentar Telegram, futura web app, WhatsApp, scraping
+                y agentes especializados.
+              </p>
+              <ul>
+                <li>PostgreSQL / Supabase</li>
+                <li>FastAPI + aiogram</li>
+                <li>Escalable sin sobreingeniería</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--marketplace" id="marketplace">
+          <div class="section-heading section-heading--split">
+            <div>
+              <p class="eyebrow">Marketplace activo</p>
+              <h2>Ofertas publicadas por negocios locales</h2>
+            </div>
+            <button class="button button--secondary" id="reload-offers" type="button">
+              Recargar
+            </button>
+          </div>
+
+          <div class="marketplace-status" id="marketplace-status">Cargando ofertas...</div>
+          <div class="offers-grid" id="offers-grid"></div>
+        </section>
+
+        <section class="section section--roadmap">
+          <div class="section-heading">
+            <p class="eyebrow">Siguiente evolución</p>
+            <h2>La web de hoy ya está preparada para ser mañana una plataforma completa.</h2>
+          </div>
+
+          <div class="roadmap-grid">
+            <div class="roadmap-step">
+              <span>01</span>
+              <h3>Telegram operativo</h3>
+              <p>Onboarding, roles, publicación de ofertas y consulta del marketplace.</p>
+            </div>
+            <div class="roadmap-step">
+              <span>02</span>
+              <h3>Web app útil</h3>
+              <p>Paneles para ciudadanos y negocios reutilizando la misma lógica de backend.</p>
+            </div>
+            <div class="roadmap-step">
+              <span>03</span>
+              <h3>IA + scraping</h3>
+              <p>Clasificación, recomendaciones y captura automatizada de datos locales.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "headers": {
+    "x-telegram-bot-api-secret-token": "your_webhook_secret"
+  },
+  "body": "{\"update_id\":10000,\"message\":{\"message_id\":1,\"from\":{\"id\":12345,\"is_bot\":false,\"first_name\":\"Oscar\",\"username\":\"oscar\"},\"chat\":{\"id\":12345,\"first_name\":\"Oscar\",\"type\":\"private\"},\"date\":1778172000,\"text\":\"Quiero reservar un desayuno rapido en Bouzas\"}}",
+  "isBase64Encoded": false
+}
