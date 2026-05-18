@@ -12,6 +12,7 @@ def load_models() -> None:
         "ahorraai_vigo.modules.users.models",
         "ahorraai_vigo.modules.businesses.models",
         "ahorraai_vigo.modules.offers.models",
+        "ahorraai_vigo.modules.orders.models",
     ):
         import_module(module_name)
 

@@ -30,7 +30,7 @@ async def start_command(
     if message.from_user is None:
         return
 
-    await state.clear()
+    await state.set_state(None)
     service = MarketplaceService(db_session)
     await service.ensure_user_from_telegram(
         telegram_user_id=message.from_user.id,
@@ -49,7 +49,7 @@ async def select_role(
     if callback.from_user is None or callback.message is None or callback.data is None:
         return
 
-    await state.clear()
+    await state.set_state(None)
     service = MarketplaceService(db_session)
     user = await service.ensure_user_from_telegram(
         telegram_user_id=callback.from_user.id,

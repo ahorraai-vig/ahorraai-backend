@@ -8,6 +8,7 @@ __pycache__/
 
 .env
 .env.local
+credenciales.json
 
 build/
 dist/
@@ -18,9 +19,14 @@ htmlcov/
 
 .DS_Store
 Thumbs.db
+*.db
+*.sqlite3
+*.log
 
 .idea/
 .vscode/
+.claude/
+*.code-workspace
 
 postgres_data/
 .tmp/

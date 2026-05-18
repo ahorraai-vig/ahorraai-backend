@@ -18,6 +18,13 @@ async def list_offers(
     session: Annotated[AsyncSession, Depends(get_db_session)],
     settings: Annotated[Settings, Depends(get_settings)],
     limit: Annotated[int, Query(ge=1, le=50)] = 10,
+    q: Annotated[str | None, Query(min_length=2)] = None,
 ) -> list[OfferCard]:
     service = MarketplaceService(session)
+    if q:
+        return await service.search_marketplace_offers(
+            query=q,
+            city_slug=settings.city_slug,
+            limit=limit,
+        )
     return await service.list_marketplace_offers(city_slug=settings.city_slug, limit=limit)

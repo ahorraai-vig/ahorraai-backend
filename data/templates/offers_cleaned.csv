@@ -1,0 +1,2 @@
+id,business_id,title,description,starts_at,ends_at,price_amount,metadata,created_at,updated_at
+example-offer,example-business,Desayuno oficina,Oferta de desayuno rapido,2026-05-07,2026-06-07,6.50,"{}",2026-05-07,2026-05-07

@@ -8,3 +8,15 @@ class PublishOfferStates(StatesGroup):
     waiting_offer_title = State()
     waiting_offer_description = State()
     waiting_offer_price = State()
+
+
+class SearchCatalogStates(StatesGroup):
+    waiting_query = State()
+
+
+class DeliveryOrderStates(StatesGroup):
+    waiting_contact_name = State()
+    waiting_contact_phone = State()
+    waiting_delivery_address = State()
+    waiting_postal_code = State()
+    waiting_delivery_city = State()
