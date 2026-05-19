@@ -1,6 +1,0 @@
-# Le dice a Railway que use Node.js, no Python
-[phases.setup]
-nixPkgs = ["nodejs_20"]
-
-[start]
-cmd = "node src/index.js"
